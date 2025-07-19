@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "migrate": "node-pg-migrate",
     "build": "tsc"
   },
   "repository": {
@@ -20,10 +21,16 @@
   },
   "homepage": "https://github.com/talafarael/hexagonal-node#readme",
   "devDependencies": {
+    "@types/pg": "^8.15.4",
+    "bcrypt": "^6.0.0",
+    "node-pg-migrate": "^8.0.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "http": "^0.0.1-security",
+    "jose": "^6.0.12",
     "nodemon": "^3.1.10",
+    "pg": "^8.16.3",
     "ts-node": "^10.9.2"
   }
 }
