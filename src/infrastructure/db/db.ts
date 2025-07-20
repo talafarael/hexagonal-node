@@ -1,7 +1,7 @@
 //connect db
 
 import { Pool } from 'pg';
-import { IDatabasePort } from '../../application/common/db/secondary/DatabasePort';
+import { IDatabasePort } from '../../application/common/db/output/DatabasePort';
 
 export class RepoConncet implements IDatabasePort {
   private pool: Pool

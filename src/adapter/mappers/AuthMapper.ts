@@ -1,3 +1,4 @@
+import { AuthResultDto } from "../../application/Auth/domain/AuthResultDto";
 import { IAuthCredentials } from "../../application/Auth/domain/IAuthCredentials";
 import { IUser } from "../../application/User/domain/IUser";
 
@@ -29,11 +30,10 @@ export class AuthMapper {
       password: user.password,
     }
   }
-  static toDto(token: string): {
+
+  static toDto(token: string): AuthResultDto {
     return {
-  name: user.name,
-  password: user.password,
-  id: user.id
-}
+      token: token
+    }
   }
 }

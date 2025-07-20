@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch src --exec ts-node src/index.ts",
-    "migrate": "node-pg-migrate",
+    "migrate": "dotenv -e .env -- node-pg-migrate up",
     "build": "tsc"
   },
   "repository": {
@@ -21,12 +21,15 @@
   },
   "homepage": "https://github.com/talafarael/hexagonal-node#readme",
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "@types/pg": "^8.15.4",
     "bcrypt": "^6.0.0",
+    "dotenv-cli": "^8.0.0",
     "node-pg-migrate": "^8.0.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "dotenv": "^17.2.0",
     "http": "^0.0.1-security",
     "jose": "^6.0.12",
     "nodemon": "^3.1.10",
